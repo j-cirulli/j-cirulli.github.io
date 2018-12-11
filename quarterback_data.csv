@@ -1,0 +1,186 @@
+round,pick,name,nfl,college,rating_nfl,height_cm,weight_kg,comp_col,td_int_col,rating_col
+1,1,Baker Mayfield,Browns,Oklahoma,93.4,185,97,68.5,4.366666666666666,175.4
+1,3,Sam Darnold,Jets,USC,69.5,190,102,64.9,2.590909090909091,153.7
+1,7,Josh Allen,Bills,Wyoming,62.8,196,107,56.2,2.0952380952380953,137.7
+1,10,Josh Rosen,Cardinals,UCLA,68.3,193,98,60.9,2.269230769230769,140.1
+1,32,Lamar Jackson,Ravens,Louisville,79.9,188,96,57.0,2.5555555555555554,142.9
+1,2,Mitch Trubisky,Bears,North Carolina,85.0,190,100,67.5,4.1,157.6
+1,10,Patrick Mahomes,Chiefs,Texas Tech,112.5,190,104,63.5,3.206896551724138,152.0
+1,12,Deshaun Watson,Texans,Clemson,101.6,188,99,67.4,2.8125,157.5
+2,52,DeShone Kizer,Browns,Notre Dame,60.0,193,106,60.7,2.473684210526316,147.7
+3,104,C.J. Beathard,49ers,Iowa,74.6,188,97,58.1,2.1052631578947367,129.8
+1,1,Jared Goff,Rams,California,94.1,193,100,62.3,3.2,144.0
+1,2,Carson Wentz,Eagles,North Dakota State,92.5,196,107,64.1,3.2142857142857144,153.9
+1,26,Paxton Lynch,Broncos,Memphis,76.7,201,110,62.9,2.5652173913043477,137.0
+3,91,Jacoby Brissett,Patriots,North Carolina State,81.6,193,106,59.5,3.066666666666667,131.3
+3,93,Cody Kessler,Browns,USC,86.1,185,97,67.5,4.631578947368421,156.4
+4,100,Connor Cook,Raiders,Michigan State,83.4,193,97,57.5,3.227272727272727,139.8
+1,1,Jameis Winston,Buccaneers,Florida State,87.3,193,104,66.0,2.3214285714285716,163.3
+1,2,Marcus Mariota,Titans,Oregon,89.5,193,100,66.8,7.5,171.8
+3,89,Sean Mannion,Rams,Oregon State,65.0,198,101,64.6,1.537037037037037,135.8
+4,103,Bryce Petty,Jets,Baylor,57.7,190,102,62.7,6.2,166.0
+1,3,Blake Bortles,Jaguars,Central Florida,80.9,196,107,65.7,2.9473684210526314,153.8
+1,22,Johnny Manziel,Browns,Texas A&M,74.4,183,93,68.9,2.8636363636363638,164.1
+1,32,Teddy Bridgewater,Vikings,Louisville,86.2,188,97,68.4,3.0,157.2
+1,16,EJ Manuel,Bills,Florida State,77.1,193,107,66.9,1.6785714285714286,150.4
+2,39,Geno Smith,Jets,West Virginia,72.7,190,100,67.4,4.666666666666667,153.5
+3,73,Mike Glennon,Buccaneers,North Carolina State,83.2,198,103,60.4,2.032258064516129,132.3
+4,98,Matt Barkley,Eagles,USC,68.3,188,102,64.1,2.4166666666666665,148.7
+4,115,Landry Jones,Steelers,Oklahoma,86.2,193,102,63.6,2.3653846153846154,141.5
+1,1,Andrew Luck,Colts,Stanford,89.3,193,108,67.0,3.727272727272727,162.8
+1,8,Ryan Tannehill,Dolphins,Texas A&M,87.8,193,93,62.5,2.0,134.2
+1,22,Brandon Weeden,Browns,Oklahoma State,76.0,190,102,69.5,2.7777777777777777,157.6
+2,57,Brock Osweiler,Broncos,Arizona State,78.0,201,108,60.6,2.2,135.0
+3,88,Nick Foles,Eagles,Arizona,87.0,198,110,66.8,2.0303030303030303,138.1
+4,102,Kirk Cousins,Redskins,Michigan State,94.6,190,91,64.1,2.2,146.1
+3,96,Terrelle Pryor,Raiders,Ohio State,69.3,193,103,60.9,2.1923076923076925,144.6
+1,1,Cam Newton,Panthers,Auburn,86.7,196,111,65.4,4.285714285714286,178.2
+1,8,Jake Locker,Titans,Washington,79.0,188,103,54.0,1.5142857142857142,119.1
+1,10,Blaine Gabbert,Jaguars,Missouri,71.6,193,106,60.9,2.2222222222222223,132.6
+1,12,Christian Ponder,Vikings,Florida State,75.9,188,100,61.8,1.6333333333333333,132.1
+2,35,Andy Dalton,Bengals,Texas Christian,88.8,188,99,61.7,2.3666666666666667,140.7
+2,36,Colin Kaepernick,49ers,Nevada,88.9,193,102,58.2,3.4166666666666665,142.5
+3,74,Ryan Mallett,Patriots,Arkansas,66.8,198,108,57.8,2.875,150.4
+1,1,Sam Bradford,Rams,Oklahoma,84.5,193,101,67.6,5.5,175.6
+1,25,Tim Tebow,Broncos,Florida,75.3,188,107,66.4,5.5,170.8
+2,48,Jimmy Clausen,Panthers,Notre Dame,61.9,190,98,62.6,2.2222222222222223,137.2
+3,85,Colt McCoy,Browns,Texas,78.9,185,95,70.3,2.488888888888889,155.0
+4,122,Mike Kafka,Eagles,Northwestern,47.7,190,97,64.1,0.95,123.9
+1,1,Matthew Stafford,Lions,Georgia,88.4,190,99,57.1,1.5454545454545454,133.3
+1,5,Mark Sanchez,Jets,USC,73.2,188,105,64.3,2.5625,153.9
+1,17,Josh Freeman,Buccaneers,Kansas State,77.6,198,108,59.1,1.2941176470588236,124.7
+4,101,Stephen McGee,Cowboys,Texas A&M,82.4,188,101,59.5,2.1538461538461537,124.1
+1,3,Matt Ryan,Falcons,Boston College,94.6,193,98,59.9,1.5135135135135136,126.2
+2,56,Brian Brohm,Packers,Louisville,26.0,190,102,65.8,2.9583333333333335,157.9
+2,57,Chad Henne,Dolphins,Michigan,75.5,190,100,59.7,2.3513513513513513,133.9
+3,94,Kevin O'Connell,Patriots,San Diego State,73.6,196,102,57.7,1.3529411764705883,121.1
+1,1,JaMarcus Russell,Raiders,Louisiana State,65.2,198,120,61.9,2.4761904761904763,147.9
+1,22,Brady Quinn,Browns,Notre Dame,64.4,193,105,58.0,2.4358974358974357,134.4
+2,36,Kevin Kolb,Eagles,Houston,78.9,190,98,61.6,2.7419354838709675,145.1
+2,43,Drew Stanton,Lions,Michigan State,66.3,190,102,64.2,1.5,138.7
+3,92,Trent Edwards,Bills,Stanford,75.5,193,104,56.3,1.0909090909090908,115.1
+1,3,Vince Young,Titans,Texas,74.4,196,104,61.8,1.5714285714285714,144.9
+1,10,Matt Leinart,Cardinals,USC,70.2,196,102,64.8,4.304347826086956,159.5
+1,11,Jay Cutler,Broncos,Vanderbilt,85.3,190,102,57.2,1.6388888888888888,125.9
+2,49,Kellen Clemens,Jets,Oregon,68.9,188,101,61.0,2.5416666666666665,139.4
+2,64,Tarvaris Jackson,Vikings,Alabama State,78.5,188,102,35.4,0.3333333333333333,64.1
+3,81,Charlie Whitehurst,Chargers,Clemson,74.9,193,99,59.7,1.065217391304348,124.2
+3,85,Brodie Croyle,Chiefs,Alabama,67.8,188,92,56.2,1.8636363636363635,128.4
+1,1,Alex Smith,49ers,Utah,87.3,193,96,66.3,5.875,164.4
+1,24,Aaron Rodgers,Packers,California,103.4,188,102,63.8,3.3076923076923075,150.3
+3,67,Charlie Frye,Browns,Akron,69.7,193,98,63.6,2.0,138.5
+4,106,Kyle Orton,Bears,Purdue,81.2,193,102,58.8,2.25,128.9
+1,4,Philip Rivers,Giants,North Carolina State,96.0,196,103,63.6,2.7941176470588234,144.2
+1,11,Ben Roethlisberger,Steelers,Miami (OH),94.3,196,108,65.5,2.4705882352941178,151.3
+1,22,J.P. Losman,Bills,Tulane,75.6,190,99,57.8,2.2222222222222223,129.8
+3,90,Matt Schaub,Falcons,Virginia,89.1,198,111,67.0,2.1538461538461537,138.4
+4,106,Luke McCown,Browns,Louisiana Tech,71.3,190,94,59.9,1.403225806451613,129.0
+1,1,Carson Palmer,Bengals,USC,87.9,196,106,59.1,1.469387755102041,131.2
+1,19,Kyle Boller,Ravens,California,69.5,190,99,47.8,1.3333333333333333,108.2
+3,88,Dave Ragone,Texans,Louisville,47.4,190,111,58.1,2.5517241379310347,134.8
+3,97,Chris Simms,Buccaneers,Texas,69.1,193,99,58.7,1.8709677419354838,138.4
+4,110,Seneca Wallace,Seahawks,Iowa State,80.8,180,88,57.7,0.9629629629629629,124.6
+1,1,David Carr,Texans,Fresno State,74.9,190,97,62.7,2.9545454545454546,151.2
+1,3,Joey Harrington,Lions,Oregon,69.4,193,99,55.2,2.5652173913043477,133.8
+1,32,Patrick Ramsey,Redskins,Tulane,74.9,188,102,58.9,1.411764705882353,126.0
+3,81,Josh McCown,Cardinals,Sam Houston State,79.7,193,98,51.2,0.7941176470588235,105.3
+4,108,David Garrard,Jaguars,East Carolina,85.8,185,110,57.0,1.5384615384615385,132.1
+4,117,Rohan Davey,Patriots,Louisiana State,56.5,188,111,59.8,1.9333333333333333,151.2
+1,1,Michael Vick,Falcons,Virginia Tech,80.4,183,97,56.0,1.9090909090909092,150.6
+2,32,Drew Brees,Chargers,Purdue,97.8,183,94,61.1,2.0,132.5
+2,53,Quincy Carter,Cowboys,Georgia,71.7,188,96,56.6,1.4,127.8
+2,59,Marques Tuiasosopo,Raiders,Washington,48.1,185,99,54.9,1.1071428571428572,121.7
+4,106,Chris Weinke,Panthers,Florida State,62.2,193,105,58.7,2.46875,151.1
+4,109,Sage Rosenfels,Redskins,Iowa State,81.2,193,100,52.1,0.6923076923076923,113.0
+4,125,Jesse Palmer,Giants,Florida,59.8,188,102,53.0,1.8235294117647058,133.1
+1,18,Chad Pennington,Jets,Marshall,90.1,190,102,63.6,3.566666666666667,157.6
+3,75,Chris Redman,Ravens,Louisville,78.6,190,101,61.4,1.6470588235294117,134.6
+1,1,Tim Couch,Browns,Kentucky,75.1,193,99,67.1,2.1142857142857143,141.7
+1,2,Donovan McNabb,Eagles,Syracuse,85.6,188,108,58.4,2.9615384615384617,155.1
+1,3,Akili Smith,Bengals,Oregon,52.8,190,99,56.6,3.0,153.1
+1,11,Daunte Culpepper,Vikings,Central Florida,87.8,193,119,65.7,2.25,153.1
+1,12,Cade McNown,Bears,UCLA,67.7,185,94,55.5,1.6585365853658536,138.9
+2,50,Shaun King,Buccaneers,Tulane,73.4,185,97,55.7,2.1176470588235294,130.6
+3,77,Brock Huard,Seahawks,Washington,80.3,193,105,54.4,1.8888888888888888,131.3
+4,101,Joe Germaine,Rams,Ohio State,65.6,183,91,59.2,2.8,151.0
+1,1,Peyton Manning,Colts,Tennessee,96.5,196,104,62.5,2.696969696969697,147.1
+1,2,Ryan Leaf,Chargers,Washington State,50.0,196,111,53.8,2.4583333333333335,141.4
+2,60,Charlie Batch,Lions,Eastern Michigan,77.2,188,99,58.0,1.7096774193548387,133.2
+3,86,Jonathan Quinn,Jaguars,Middle Tennessee State,60.4,198,110,48.5,0.2857142857142857,84.5
+3,91,Brian Griese,Broncos,Michigan,82.7,190,97,59.5,1.8,130.6
+1,26,Jim Druckenmiller,49ers,Virginia Tech,29.2,193,109,53.8,1.8888888888888888,130.1
+2,42,Jake Plummer,Cardinals,Arizona State,74.6,188,96,55.4,1.8823529411764706,133.8
+4,99,Danny Wuerffel,Saints,Florida,56.4,185,96,60.5,2.7142857142857144,163.6
+2,42,Tony Banks,Rams,Michigan State,72.4,193,104,60.7,0.9523809523809523,135.5
+3,85,Bobby Hoying,Eagles,Ohio State,64.3,190,100,58.0,1.6285714285714286,142.6
+1,5,Kerry Collins,Panthers,Penn State,73.8,196,112,56.3,1.8571428571428572,137.3
+2,60,Kordell Stewart,Steelers,Colorado,70.7,185,98,58.1,1.736842105263158,136.5
+3,80,Stoney Case,Cardinals,New Mexico,53.3,190,92,54.7,1.7179487179487178,130.5
+3,84,Eric Zeier,Browns,Georgia,74.4,185,97,59.8,1.8108108108108107,137.1
+1,3,Heath Shuler,Redskins,Tennessee,54.3,188,97,61.6,3.0,147.0
+1,6,Trent Dilfer,Buccaneers,Fresno State,70.2,193,102,59.1,2.409090909090909,148.3
+4,111,Perry Klein,Falcons,C.W. Post,39.6,188,98,52.7,0.0,94.0
+1,1,Drew Bledsoe,Patriots,Washington State,77.1,196,107,54.3,1.3529411764705883,126.2
+1,2,Rick Mirer,Seahawks,Notre Dame,63.5,190,95,54.0,1.7826086956521738,139.0
+3,58,Billy Joe Hobert,Raiders,Washington,67.0,190,104,58.1,2.076923076923077,132.4
+5,118,Mark Brunell,Packers,Washington,84.0,185,98,52.0,1.4375,118.6
+1,6,David Klingler,Bengals,Houston,65.1,190,95,57.6,2.3947368421052633,138.2
+1,25,Tommy Maddox,Broncos,UCLA,72.4,193,99,58.4,1.1,132.9
+2,46,Tony Sacca,Cardinals,Penn State,5.3,196,104,48.7,1.7083333333333333,119.1
+4,86,Craig Erickson,Buccaneers,Miami (FL),74.3,188,94,55.9,2.090909090909091,137.8
+4,102,Casey Weldon,Eagles,Florida State,57.4,185,93,59.3,2.8,150.5
+4,107,Will Furrer,Bears,Virginia Tech,31.4,190,95,53.7,0.9347826086956522,113.1
+1,16,Dan McGwire,Seahawks,San Diego State,52.3,203,108,59.1,1.6333333333333333,140.0
+1,24,Todd Marinovich,Raiders,USC,66.4,193,97,61.6,1.16,130.7
+2,33,Brett Favre,Falcons,Southern Mississippi,86.0,188,102,52.4,1.5294117647058822,116.6
+2,34,Browning Nagle,Jets,Louisville,53.5,190,102,55.7,1.5238095238095237,131.7
+4,84,Scott Zolak,Patriots,Maryland,64.8,196,104,53.0,0.5217391304347826,103.3
+4,99,Donald Hollas,Bengals,Rice,61.8,190,97,56.3,0.5172413793103449,110.9
+1,7,Andre Ware,Lions,Houston,63.5,188,92,61.5,2.6785714285714284,143.4
+3,63,Peter Tom Willis,Bears,Florida State,54.9,188,85,60.8,2.0625,148.3
+3,70,Neil O'Donnell,Steelers,Maryland,81.8,190,103,58.8,1.2380952380952381,129.2
+4,84,Troy Taylor,Jets,California,90.6,193,90,58.8,1.108695652173913,124.1
+4,86,Cary Conklin,Redskins,Washington,72.2,193,99,53.7,0.8611111111111112,112.3
+4,93,Scott Mitchell,Dolphins,Utah,75.3,198,108,57.4,1.8157894736842106,135.2
+1,32,Steve Walsh,Cowboys,Miami (FL),66.4,190,93,59.4,2.526315789473684,142.2
+1,32,Timm Rosenbach,Cardinals,Washington State,66.0,188,95,60.1,1.054054054054054,130.8
+1,1,Troy Aikman,Cowboys,UCLA,81.6,193,99,63.3,2.5,149.4
+2,32,Mike Elkins,Chiefs,Wake Forest,16.7,190,100,54.9,0.86,114.0
+2,51,Billy Joe Tolliver,Chargers,Texas Tech,67.7,185,98,49.0,0.95,109.8
+3,74,Anthony Dilweg,Packers,Duke,72.3,190,97,57.6,1.125,128.9
+3,83,Erik Wilhelm,Bengals,Oregon State,71.1,190,98,58.8,0.8524590163934426,115.4
+1,1,Vinny Testaverde,Buccaneers,Miami (FL),75.0,196,106,61.3,1.92,152.9
+1,6,Kelly Stouffer,Cardinals,Colorado State,54.5,190,95,56.8,0.9473684210526315,120.2
+1,13,Chris Miller,Falcons,Oregon,74.9,188,96,55.2,1.0769230769230769,116.4
+3,64,Cody Carlson,Oilers,Baylor,70.0,190,91,51.9,0.9705882352941176,122.2
+4,88,Mark Vlasic,Chargers,Iowa,63.2,190,92,56.8,2.8,141.1
+4,110,Steve Beuerlein,Raiders,Notre Dame,80.3,190,99,55.6,0.6136363636363636,120.3
+1,12,Chuck Long,Lions,Iowa,64.5,193,98,64.9,1.5217391304347827,150.5
+2,47,Jack Trudeau,Colts,Illinois,63.3,190,102,63.9,1.3421052631578947,131.4
+3,67,Bubby Brister,Steelers,N.E. Louisiana,72.3,190,92,50.7,0.5,88.5
+3,71,Hugh Millen,Rams,Washington,73.5,196,97,56.8,0.4782608695652174,105.1
+4,99,Doug Gaynor,Bengals,Long Beach State,108.3,188,92,68.1,1.0,141.8
+1,32,Bernie Kosar,Browns,Miami (FL),81.8,196,95,62.3,1.3793103448275863,139.8
+2,37,Randall Cunningham,Eagles,UNLV,81.5,193,96,58.1,2.033333333333333,137.3
+3,73,Tim Riordan,Cardinals,Temple,39.6,185,83,56.5,0.9523809523809523,116.6
+2,38,Boomer Esiason,Bengals,Maryland,81.1,196,101,54.2,1.5555555555555556,126.0
+3,59,Jeff Hostetler,Giants,West Virginia,80.5,190,97,51.6,1.4705882352941178,119.7
+3,80,Rick McIvor,Cardinals,Texas,39.6,193,95,42.9,0.7894736842105263,111.0
+3,83,Jay Schroeder,Redskins,UCLA,71.7,193,97,58.6,1.3333333333333333,150.6
+5,113,Steve Pelluer,Cowboys,Washington,71.6,193,94,57.7,1.1538461538461537,115.2
+1,7,Todd Blackledge,Chiefs,Penn State,60.2,190,102,51.8,1.0,121.4
+1,15,Tony Eason,Patriots,Illinois,79.7,193,96,61.4,1.2758620689655173,133.8
+1,27,Dan Marino,Dolphins,Pittsburgh,86.4,193,101,57.6,1.144927536231884,127.7
+1,4,Art Schlichter,Colts,Ohio State,42.6,190,95,52.3,1.0869565217391304,126.6
+1,5,Jim McMahon,Bears,Brigham Young,78.2,185,88,61.6,2.4705882352941178,156.9
+2,44,Oliver Luck,Oilers,West Virginia,64.1,188,88,50.9,0.9545454545454546,110.1
+2,48,Matt Kofler,Bills,San Diego State,52.3,190,87,58.7,1.0,124.9
+4,84,Mike Pagel,Colts,Arizona State,63.3,188,93,51.5,1.7419354838709677,121.8
+1,32,Dave Wilson,Saints,Illinois,63.8,190,93,52.9,1.2666666666666666,117.2
+4,90,Tom Flick,Redskins,Washington,25.9,188,86,60.3,1.2,133.4
+4,98,Mark Herrmann,Broncos,Purdue,64.3,193,90,59.0,0.9466666666666667,129.2
+1,28,Mark Malone,Steelers,Arizona State,61.9,193,101,49.0,0.8214285714285714,107.6
+4,85,Eric Hipple,Lions,Utah State,68.7,188,88,54.0,0.8095238095238095,117.3
+4,89,Rusty Lisch,Cardinals,Notre Dame,25.1,190,96,51.0,0.6666666666666666,116.1
+4,101,Ed Luther,Chargers,San Jose State,63.2,190,93,53.7,0.9038461538461539,112.3
+4,109,Paul McDonald,Browns,USC,65.7,188,83,59.7,2.8461538461538463,148.2
