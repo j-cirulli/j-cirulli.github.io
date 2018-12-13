@@ -11784,6 +11784,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Every year, struggling nfl franchise turn to the NFL Draft to pick a new quarterback. Often regarded as the most important player on the team, quarterbacks have to use a lot of skills, and it has been an ongoing challenge to determine what a quarterback's potential is, and how their game will translate to the next level.</p>
+<p>Starting the day after the last year's NFL Draft, experts and scouts spend countless days trying to determine which quarterbacks will pan out the best. While this investigation is by no means exhaustive, as a quarterback's ability goes beyond statistics and 2 physical measures, and encorporates a lot of intangible features such as footwork and football IQ, it does offer insight as to what statistics seem to have a higher impact on determining NFL Success, and offers and interesting deliverable of future Draft predictions.</p>
 
 </div>
 </div>
@@ -11792,7 +11793,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>External Reading:</p>
+<p>As noted, this is a very important topic in the world of football, and as such creates a lot of media attention. A few articles I found interesting as a sports nut about the topic are:</p>
 <ul>
 <li>Discussion of NFL Quarterback evaluation challenges: <a href="http://www.espn.com/nfl/story/_/id/23039883/history-tells-us-nfl-terrible-evaluating-quarterbacks-means-2018-draft-prospects">http://www.espn.com/nfl/story/_/id/23039883/history-tells-us-nfl-terrible-evaluating-quarterbacks-means-2018-draft-prospects</a></li>
 <li>Top 50 Quarterback Busts of All-Time: <a href="https://bleacherreport.com/articles/1047730-50-biggest-quarterback-busts-in-nfl-draft-history#slide49">https://bleacherreport.com/articles/1047730-50-biggest-quarterback-busts-in-nfl-draft-history#slide49</a></li>
@@ -11805,7 +11806,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this tutorial, I look to examine how some factors regarding collegiate quarterbacks tend to translate to professionals, especially in the capacity of quarterbacks considered for first round draft picks (drafted before or on the 128th pick). The factors examined were:</p>
+<p>In this tutorial, I look to examine how some factors regarding collegiate quarterbacks tend to translate to professionals, especially in the capacity of quarterbacks considered for early round draft picks (determined to be before or on the 128th pick). The factors examined were:</p>
 <ol>
 <li>Height</li>
 <li>Weight</li>
@@ -11813,6 +11814,7 @@ div#notebook {
 <li>TD to Interception Ratio</li>
 <li>College Quarterback Rating</li>
 </ol>
+<p>These factors are widely looked at as being very influential in determining a college quarterback's NFL readiness, along with other things such as feel for the game, arm strength, footwork, etc. that are a lot harder to quantify without access to specific data.</p>
 
 </div>
 </div>
@@ -11821,7 +11823,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From these characteristics, multivariable linear regression was used to predict NFL Quarterback Rating, which was deemed as the best way to determine NFL Quarterback success.</p>
+<p>From these characteristics, I created a fitted multivariable linear regression that I then used to predict NFL Quarterback performance by means of NFL QBR (quarterback rating). This stat is essentially a measure of a quarterback's success and efficiency, and seemed to be the best possible option when fitting my regression.</p>
 
 </div>
 </div>
@@ -11830,7 +11832,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-DATA-COLLECTION">1. DATA COLLECTION<a class="anchor-link" href="#1.-DATA-COLLECTION">&#182;</a></h2><p>Retrieving the data necessary for the analysis required scrapping 3 websites and compiling it into a csv file named: quarterback_data.csv</p>
+<h2 id="1.-DATA-COLLECTION">1. DATA COLLECTION<a class="anchor-link" href="#1.-DATA-COLLECTION">&#182;</a></h2><p>Data collection for this project was done by using BeautifulSoup (link below) in order to help aid in website scraping on 3 websites denoted later. After the scraping was finished, the file was exported to quarterback_data.csv, where the data I used in later analysis and exploration is accessible.</p>
+<p>Some interesting features to the website scraping I did was that for 2 of the websites, I was searching and finding players through a process that sometimes took me through multiple pages. Whereas easier/trivial scraping (like the first website I used) just requires reading in information off a given website, jumping from page to page requires more attention to detail. It mean multiple url requests that had to be formatted to meet the websites criteria, and also required finding the correct links for redirection. In addition, the websites don't always act in the same way depending on the input (EX: Josh Allen appeared 7th in a search list of all Josh Allen's to play in the NFL, where as Patrick Mahomes bypasses the search list page entirely and jumps straight to his bio). The intricacies of these processes are outlined during their respective parts.
+One advantageous part of my scraping was that I was able to find brother and sister/related websites that each provided college and professional statistics, respectfully, in a similar manner. This helped make the scraping process easier on the second time around.
+With that said, this website also has some minor errrors, such as some bios not being the same format, etc. that cause the automation of scraping to end up losing some data, which is a fault of both the website and my procedure</p>
 
 </div>
 </div>
@@ -11839,7 +11844,47 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Necessary-Imports">Necessary Imports<a class="anchor-link" href="#Necessary-Imports">&#182;</a></h3><ol>
+<h3 id="Necessary-Installations">Necessary Installations<a class="anchor-link" href="#Necessary-Installations">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install lxml
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: lxml in /opt/conda/lib/python3.6/site-packages (4.2.5)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Necessary-Imports">Necessary Imports<a class="anchor-link" href="#Necessary-Imports">&#182;</a></h3><p>This project uses all of the following in some capacity. Specific emphasis is on pandas, BeautifulSoup, re, requests, statsmodels (which inherently uses numpy), and seaborn</p>
+<ol>
 <li>pandas - <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a></li>
 <li>matplotlib - <a href="https://matplotlib.org/">https://matplotlib.org/</a></li>
 <li>seaborn - <a href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></li>
@@ -11856,7 +11901,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[882]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Imports</span>
@@ -11920,7 +11965,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[883]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># access website using get request</span>
@@ -11949,7 +11994,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[883]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -12051,7 +12096,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[884]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
@@ -12071,7 +12116,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[884]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12161,7 +12206,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[885]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># modify supplemental picks to be at end of their round (how the NFL draft works)</span>
@@ -12202,7 +12247,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[886]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
@@ -12218,7 +12263,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[887]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## ONLY 128 and lower</span>
@@ -12236,7 +12281,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[887]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12371,7 +12416,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[888]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get only recent data (1980 or later)</span>
@@ -12402,7 +12447,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[888]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -12606,7 +12651,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[889]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Dataframe characteristics</span>
@@ -12640,7 +12685,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="II.-Get-NFL-Stats,-Height,-Weight">II. Get NFL Stats, Height, Weight<a class="anchor-link" href="#II.-Get-NFL-Stats,-Height,-Weight">&#182;</a></h3><p>Remove all rows that do not have all necessary data (no NFL stats or unretrievable), keeping track of lost data numbers</p>
+<h3 id="II.-Get-NFL-Stats,-Height,-and-Weight">II. Get NFL Stats, Height, and Weight<a class="anchor-link" href="#II.-Get-NFL-Stats,-Height,-and-Weight">&#182;</a></h3><p>Remove all rows that do not have all necessary data due to no NFL stats (i.e. haven't played) or unretrievable data, keeping track of lost data numbers</p>
 <p>Data is from: <a href="https://www.pro-football-reference.com/">https://www.pro-football-reference.com/</a></p>
 <ul>
 <li>Iterate through each row of dataframe</li>
@@ -12666,7 +12711,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[890]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># new dataframe columns</span>
@@ -12819,7 +12864,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[890]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13088,13 +13133,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Loss-Data-Statistics">Loss Data Statistics<a class="anchor-link" href="#Loss-Data-Statistics">&#182;</a></h4>
+<h4 id="Loss-Data-Statistics">Loss Data Statistics<a class="anchor-link" href="#Loss-Data-Statistics">&#182;</a></h4><p>This number carries most of its weight from players that have never played, or haven't played significant snaps to have a reasonable QBR</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[891]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of Data Points Removed: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lost_data_nfl</span><span class="p">))</span>  
@@ -13145,7 +13191,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[892]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># completion percentage</span>
@@ -13246,7 +13292,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[892]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13584,7 +13630,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[893]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of Data Points Removed: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lost_data_college</span><span class="p">))</span>  
@@ -13623,7 +13669,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[894]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># export dataframe to csv to store</span>
@@ -13645,11 +13691,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[895]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Length of Data Frame: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)))</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13671,9 +13716,29 @@ div#notebook {
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[895]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13696,11 +13761,7 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>round</th>
       <th>pick</th>
-      <th>name</th>
-      <th>nfl</th>
-      <th>college</th>
       <th>rating_nfl</th>
       <th>height_cm</th>
       <th>weight_kg</th>
@@ -13711,284 +13772,84 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Baker Mayfield</td>
-      <td>Browns</td>
-      <td>Oklahoma</td>
-      <td>93.4</td>
-      <td>185</td>
-      <td>97</td>
-      <td>68.5</td>
-      <td>4.366667</td>
-      <td>175.4</td>
+      <th>count</th>
+      <td>185.000000</td>
+      <td>185.000000</td>
+      <td>185.000000</td>
+      <td>185.000000</td>
+      <td>185.000000</td>
+      <td>185.000000</td>
+      <td>185.000000</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Sam Darnold</td>
-      <td>Jets</td>
-      <td>USC</td>
-      <td>69.5</td>
-      <td>190</td>
-      <td>102</td>
-      <td>64.9</td>
-      <td>2.590909</td>
-      <td>153.7</td>
+      <th>mean</th>
+      <td>49.270270</td>
+      <td>71.876216</td>
+      <td>190.989189</td>
+      <td>99.681081</td>
+      <td>59.115676</td>
+      <td>2.039979</td>
+      <td>135.735135</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>7</td>
-      <td>Josh Allen</td>
-      <td>Bills</td>
-      <td>Wyoming</td>
-      <td>62.8</td>
-      <td>196</td>
-      <td>107</td>
-      <td>56.2</td>
-      <td>2.095238</td>
-      <td>137.7</td>
+      <th>std</th>
+      <td>38.935041</td>
+      <td>16.136418</td>
+      <td>3.875774</td>
+      <td>6.182102</td>
+      <td>5.271954</td>
+      <td>1.114066</td>
+      <td>17.290080</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>1</td>
-      <td>10</td>
-      <td>Josh Rosen</td>
-      <td>Cardinals</td>
-      <td>UCLA</td>
-      <td>68.3</td>
-      <td>193</td>
-      <td>98</td>
-      <td>60.9</td>
-      <td>2.269231</td>
-      <td>140.1</td>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>5.300000</td>
+      <td>180.000000</td>
+      <td>83.000000</td>
+      <td>35.400000</td>
+      <td>0.000000</td>
+      <td>64.100000</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>1</td>
-      <td>32</td>
-      <td>Lamar Jackson</td>
-      <td>Ravens</td>
-      <td>Louisville</td>
-      <td>79.9</td>
-      <td>188</td>
-      <td>96</td>
-      <td>57.0</td>
-      <td>2.555556</td>
-      <td>142.9</td>
+      <th>25%</th>
+      <td>10.000000</td>
+      <td>64.400000</td>
+      <td>188.000000</td>
+      <td>96.000000</td>
+      <td>56.200000</td>
+      <td>1.275862</td>
+      <td>126.000000</td>
     </tr>
     <tr>
-      <th>15</th>
-      <td>1</td>
-      <td>2</td>
-      <td>Mitch Trubisky</td>
-      <td>Bears</td>
-      <td>North Carolina</td>
-      <td>85.0</td>
-      <td>190</td>
-      <td>100</td>
-      <td>67.5</td>
-      <td>4.100000</td>
-      <td>157.6</td>
+      <th>50%</th>
+      <td>43.000000</td>
+      <td>73.600000</td>
+      <td>190.000000</td>
+      <td>99.000000</td>
+      <td>59.100000</td>
+      <td>1.888889</td>
+      <td>135.200000</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>1</td>
-      <td>10</td>
-      <td>Patrick Mahomes</td>
-      <td>Chiefs</td>
-      <td>Texas Tech</td>
-      <td>112.5</td>
-      <td>190</td>
-      <td>104</td>
-      <td>63.5</td>
-      <td>3.206897</td>
-      <td>152.0</td>
+      <th>75%</th>
+      <td>86.000000</td>
+      <td>81.600000</td>
+      <td>193.000000</td>
+      <td>103.000000</td>
+      <td>62.600000</td>
+      <td>2.541667</td>
+      <td>148.300000</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>1</td>
-      <td>12</td>
-      <td>Deshaun Watson</td>
-      <td>Texans</td>
-      <td>Clemson</td>
-      <td>101.6</td>
-      <td>188</td>
-      <td>99</td>
-      <td>67.4</td>
-      <td>2.812500</td>
-      <td>157.5</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2</td>
-      <td>52</td>
-      <td>DeShone Kizer</td>
-      <td>Browns</td>
-      <td>Notre Dame</td>
-      <td>60.0</td>
-      <td>193</td>
-      <td>106</td>
-      <td>60.7</td>
-      <td>2.473684</td>
-      <td>147.7</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>3</td>
-      <td>104</td>
-      <td>C.J. Beathard</td>
-      <td>49ers</td>
-      <td>Iowa</td>
-      <td>74.6</td>
-      <td>188</td>
-      <td>97</td>
-      <td>58.1</td>
-      <td>2.105263</td>
-      <td>129.8</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Jared Goff</td>
-      <td>Rams</td>
-      <td>California</td>
-      <td>94.1</td>
-      <td>193</td>
-      <td>100</td>
-      <td>62.3</td>
-      <td>3.200000</td>
-      <td>144.0</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>1</td>
-      <td>2</td>
-      <td>Carson Wentz</td>
-      <td>Eagles</td>
-      <td>North Dakota State</td>
-      <td>92.5</td>
-      <td>196</td>
-      <td>107</td>
-      <td>64.1</td>
-      <td>3.214286</td>
-      <td>153.9</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>1</td>
-      <td>26</td>
-      <td>Paxton Lynch</td>
-      <td>Broncos</td>
-      <td>Memphis</td>
-      <td>76.7</td>
-      <td>201</td>
-      <td>110</td>
-      <td>62.9</td>
-      <td>2.565217</td>
-      <td>137.0</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>3</td>
-      <td>91</td>
-      <td>Jacoby Brissett</td>
-      <td>Patriots</td>
-      <td>North Carolina State</td>
-      <td>81.6</td>
-      <td>193</td>
-      <td>106</td>
-      <td>59.5</td>
-      <td>3.066667</td>
-      <td>131.3</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>3</td>
-      <td>93</td>
-      <td>Cody Kessler</td>
-      <td>Browns</td>
-      <td>USC</td>
-      <td>86.1</td>
-      <td>185</td>
-      <td>97</td>
-      <td>67.5</td>
-      <td>4.631579</td>
-      <td>156.4</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>4</td>
-      <td>100</td>
-      <td>Connor Cook</td>
-      <td>Raiders</td>
-      <td>Michigan State</td>
-      <td>83.4</td>
-      <td>193</td>
-      <td>97</td>
-      <td>57.5</td>
-      <td>3.227273</td>
-      <td>139.8</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Jameis Winston</td>
-      <td>Buccaneers</td>
-      <td>Florida State</td>
-      <td>87.3</td>
-      <td>193</td>
-      <td>104</td>
-      <td>66.0</td>
-      <td>2.321429</td>
-      <td>163.3</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>1</td>
-      <td>2</td>
-      <td>Marcus Mariota</td>
-      <td>Titans</td>
-      <td>Oregon</td>
-      <td>89.5</td>
-      <td>193</td>
-      <td>100</td>
-      <td>66.8</td>
+      <th>max</th>
+      <td>125.000000</td>
+      <td>112.500000</td>
+      <td>203.000000</td>
+      <td>120.000000</td>
+      <td>70.300000</td>
       <td>7.500000</td>
-      <td>171.8</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>3</td>
-      <td>89</td>
-      <td>Sean Mannion</td>
-      <td>Rams</td>
-      <td>Oregon State</td>
-      <td>65.0</td>
-      <td>198</td>
-      <td>101</td>
-      <td>64.6</td>
-      <td>1.537037</td>
-      <td>135.8</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>4</td>
-      <td>103</td>
-      <td>Bryce Petty</td>
-      <td>Jets</td>
-      <td>Baylor</td>
-      <td>57.7</td>
-      <td>190</td>
-      <td>102</td>
-      <td>62.7</td>
-      <td>6.200000</td>
-      <td>166.0</td>
+      <td>178.200000</td>
     </tr>
   </tbody>
 </table>
@@ -14005,7 +13866,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-DATA-VISUALIZATION-&amp;-EXPLORATION">2. DATA VISUALIZATION &amp; EXPLORATION<a class="anchor-link" href="#2.-DATA-VISUALIZATION-&amp;-EXPLORATION">&#182;</a></h2><p>Look to make sense of the data through a variety of graphical methods as well as fitting a multivariable linear regression and using it to predict next years draft big board</p>
+<h2 id="2.-DATA-VISUALIZATION-&amp;-EXPLORATION">2. DATA VISUALIZATION &amp; EXPLORATION<a class="anchor-link" href="#2.-DATA-VISUALIZATION-&amp;-EXPLORATION">&#182;</a></h2><p>In this part, I'm looking to make sense of the data through a variety of graphical methods as well as fitting a multivariable linear regression and using it to predict next years draft big board.
+Graphically, I wanted to show how each of these characteristics/attributes correlate with NFL Passer Rating to try to get a feel for if there is a relationship, if any.
+From there, I created a regression to further see the significance on the characteristics statistically, and to try to use the data to make predictions on X data characteristics outside of the data set (next year's draft)</p>
 
 </div>
 </div>
@@ -14028,7 +13891,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[896]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;rating_nfl&#39;</span><span class="p">]</span>
@@ -14088,7 +13951,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[897]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;td_int_col&#39;</span><span class="p">]</span>
@@ -14147,7 +14010,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[898]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;comp_col&#39;</span><span class="p">]</span>
@@ -14206,7 +14069,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[899]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y4</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;height_cm&#39;</span><span class="p">]</span>
@@ -14265,7 +14128,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[900]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y5</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;height_cm&#39;</span><span class="p">]</span>
@@ -14325,7 +14188,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[901]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y6</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pick&#39;</span><span class="p">]</span>
@@ -14376,7 +14239,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[902]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># const for regression analysis</span>
@@ -14417,8 +14280,8 @@ div#notebook {
 Dep. Variable:             rating_nfl   R-squared:                       0.189
 Model:                            OLS   Adj. R-squared:                  0.166
 Method:                 Least Squares   F-statistic:                     8.345
-Date:                Tue, 11 Dec 2018   Prob (F-statistic):           4.11e-07
-Time:                        20:19:37   Log-Likelihood:                -757.12
+Date:                Thu, 13 Dec 2018   Prob (F-statistic):           4.11e-07
+Time:                        07:22:12   Log-Likelihood:                -757.12
 No. Observations:                 185   AIC:                             1526.
 Df Residuals:                     179   BIC:                             1546.
 Df Model:                           5                                         
@@ -14464,13 +14327,13 @@ strong multicollinearity or other numerical problems.
 <li>shows a general correlation and that all of these factors have a statistically signifcant impact on quarterback performance</li>
 </ul>
 </li>
-<li>Analysis by Characteristic (most - least signifcant)<ul>
+<li>Analysis by Characteristic (most - least signifcant)<ol>
 <li>Completion Percentage</li>
 <li>Passer Rating</li>
 <li>Td-Int Ratio</li>
 <li>Weight</li>
 <li>Height</li>
-</ul>
+</ol>
 </li>
 </ul>
 
@@ -14499,7 +14362,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[903]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># column for residual</span>
@@ -14522,7 +14385,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[903]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -14896,13 +14759,14 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Best-10-Residuals">Best 10 Residuals<a class="anchor-link" href="#Best-10-Residuals">&#182;</a></h3>
+<h3 id="Best-10-Residuals">Best 10 Residuals<a class="anchor-link" href="#Best-10-Residuals">&#182;</a></h3><p>An interesting dataframe to see who out performs the most (probably a few familiar names!)</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[904]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_best</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;rating_residual&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14919,7 +14783,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[904]:</div>
+<div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15133,13 +14997,14 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Worst-10-Residuals">Worst 10 Residuals<a class="anchor-link" href="#Worst-10-Residuals">&#182;</a></h3>
+<h3 id="Worst-10-Residuals">Worst 10 Residuals<a class="anchor-link" href="#Worst-10-Residuals">&#182;</a></h3><p>Not so many familiar names....</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[905]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_worst</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;rating_residual&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -15156,7 +15021,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[905]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -15370,7 +15235,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="V.-Graphical-Examination-of-Residual-Performance">V. Graphical Examination of Residual Performance<a class="anchor-link" href="#V.-Graphical-Examination-of-Residual-Performance">&#182;</a></h2><p>Look at the distribution of residuals using violinplots</p>
+<h2 id="V.-Graphical-Examination-of-Residual-Performance">V. Graphical Examination of Residual Performance<a class="anchor-link" href="#V.-Graphical-Examination-of-Residual-Performance">&#182;</a></h2><p>Look at the distribution of residuals using violinplots to see how well it is capturing the data</p>
 
 </div>
 </div>
@@ -15385,7 +15250,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[906]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Create violin plot of residuals to see overall accuracy</span>
@@ -15440,7 +15305,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[907]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Create violin plot of residuals for each round of draft picks </span>
@@ -15507,13 +15372,14 @@ strong multicollinearity or other numerical problems.
 <li>candidates are held in tuples (NAME, SCHOOL), so name and school information is extracted slightly differently</li>
 <li>Height and weight are extracted from this site. Although it is the cfb version, the same exact procedure is used as on: <a href="https://www.pro-football-reference.com/">https://www.pro-football-reference.com/</a></li>
 </ul>
+<p>As stated in the comments, the candidates are hand chosen. I just looked on the internet for a few big boards and threw in the most common names. Kyler Murray (this years Heisman Trophy winner) isn't on any lists because he is playing professional baseball, but I was interested on how he would stack up, so I threw him in there as well.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[908]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## candidates: found from web research and manually inputted</span>
@@ -15629,12 +15495,12 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[909]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">d_in</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">names</span><span class="p">,</span> <span class="s1">&#39;height_cm&#39;</span><span class="p">:</span> <span class="n">heights</span><span class="p">,</span> <span class="s1">&#39;weight_kg&#39;</span><span class="p">:</span> <span class="n">weights</span><span class="p">,</span> <span class="s1">&#39;comp_col&#39;</span><span class="p">:</span> <span class="n">comp_percs</span><span class="p">,</span> <span class="s1">&#39;td_int_col&#39;</span><span class="p">:</span> <span class="n">td_ints</span><span class="p">,</span> <span class="s1">&#39;rating_col&#39;</span><span class="p">:</span> <span class="n">ratings</span><span class="p">}</span>
 <span class="n">cand_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d_in</span><span class="p">)</span>
-<span class="n">cand_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">cand_df</span>
 </pre></div>
 
 </div>
@@ -15647,7 +15513,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[909]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -15724,6 +15590,24 @@ strong multicollinearity or other numerical problems.
       <td>2.461538</td>
       <td>138.1</td>
     </tr>
+    <tr>
+      <th>5</th>
+      <td>Ryan Finley</td>
+      <td>193</td>
+      <td>96</td>
+      <td>64.3</td>
+      <td>2.214286</td>
+      <td>139.4</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Kyler Murray</td>
+      <td>178</td>
+      <td>88</td>
+      <td>68.7</td>
+      <td>3.428571</td>
+      <td>184.6</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -15746,7 +15630,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[910]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cand_df</span><span class="p">[</span><span class="s1">&#39;projected_qbr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -15767,7 +15651,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[910]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -15899,7 +15783,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[911]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cand_df</span> <span class="o">=</span> <span class="n">cand_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;projected_qbr&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -15916,7 +15800,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[911]:</div>
+<div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -16042,13 +15926,14 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="IV.-Deliberable:-Draft-Board">IV. Deliberable: Draft Board<a class="anchor-link" href="#IV.-Deliberable:-Draft-Board">&#182;</a></h3>
+<h3 id="IV.-Deliberable:-Draft-Board">IV. Deliberable: Draft Board<a class="anchor-link" href="#IV.-Deliberable:-Draft-Board">&#182;</a></h3><p>Index represents their position ranking</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[912]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">projected_big_board</span> <span class="o">=</span> <span class="n">cand_df</span><span class="p">[[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;projected_qbr&#39;</span><span class="p">]]</span>
@@ -16067,7 +15952,7 @@ strong multicollinearity or other numerical problems.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[912]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -16155,7 +16040,7 @@ strong multicollinearity or other numerical problems.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[913]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get all nfl passer ratings</span>
