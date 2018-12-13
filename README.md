@@ -1,4 +1,5 @@
 # Predicting College Quarterback Success in the NFL
+#### By: Jared Cirulli
 
 ## Discussion
 NFL Quarterbacks come in all shapes and sizes, and historically it has been a great challenge, and often a hinderence, to find a quarterback that can perform at the next level. This project looks at this challenge, and examines some relevant quarterback statistics and physical attributes to see how well quarterback success can be determined and what factors contribute the most to this success.
